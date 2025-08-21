@@ -1,0 +1,1258 @@
+{
+  "name": "Resume ATS (final)",
+  "nodes": [
+    {
+      "parameters": {
+        "url": "https://graph.microsoft.com/v1.0/me/mailFolders",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "microsoftOAuth2Api",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer eyJ0eXAiOiJKV1QiLCJub25jZSI6Ik5UN2s2Vnl3RUpseHhQby1NcWRtV2tibGdIMU5jU29nN0ZmaEVyU1hHU2MiLCJhbGciOiJSUzI1NiIsIng1dCI6IkpZaEFjVFBNWl9MWDZEQmxPV1E3SG4wTmVYRSIsImtpZCI6IkpZaEFjVFBNWl9MWDZEQmxPV1E3SG4wTmVYRSJ9.eyJhdWQiOiIwMDAwMDAwMy0wMDAwLTAwMDAtYzAwMC0wMDAwMDAwMDAwMDAiLCJpc3MiOiJodHRwczovL3N0cy53aW5kb3dzLm5ldC84ZmRkNDQ2MC00ZDU4LTQ0ZWQtYWMyYi1lNWM0MjlkOGU4MDAvIiwiaWF0IjoxNzUzMzQ4ODUwLCJuYmYiOjE3NTMzNDg4NTAsImV4cCI6MTc1MzQzNTU1MCwiYWNjdCI6MCwiYWNyIjoiMSIsImFjcnMiOlsicDEiXSwiYWlvIjoiQVdRQW0vOFpBQUFBMXNnd0hQSVBwQ25KZEZ2MnA0U3B3cE04M0JIZWJpNkNOT0VlNWxmTUJZWWFORk5hcEdrYzk5Vmoxcm9nRzErcjFieVE1aHJyeWp2YThMeG4xdkN6R2FHUHVBMkJpWHRqSGdMbUlxVTUwL29TZU5MTU50bTZtUWsrNXdoUmdkc2YiLCJhbXIiOlsicHdkIiwibWZhIl0sImFwcF9kaXNwbGF5bmFtZSI6IkdyYXBoIEV4cGxvcmVyIiwiYXBwaWQiOiJkZThiYzhiNS1kOWY5LTQ4YjEtYThhZC1iNzQ4ZGE3MjUwNjQiLCJhcHBpZGFjciI6IjAiLCJmYW1pbHlfbmFtZSI6IlJlbmRlcnMiLCJnaXZlbl9uYW1lIjoiRGFubnkiLCJpZHR5cCI6InVzZXIiLCJpcGFkZHIiOiIxMDMuMjE2LjEzNS4xNDAiLCJuYW1lIjoiRGFubnkgUmVuZGVycyB8IFByb2N1cmVvbiIsIm9pZCI6IjQ3NDc0YmQ2LTg5ZjctNGE1Zi1iM2U4LTk1YWFlYmFmZWY1MiIsInBsYXRmIjoiMyIsInB1aWQiOiIxMDAzM0ZGRkFGRDg1MUQ0IiwicmgiOiIxLkFYb0FZRVRkajFoTjdVU3NLLVhFS2Rqb0FBTUFBQUFBQUFBQXdBQUFBQUFBQUFCNkFMSjZBQS4iLCJzY3AiOiJvcGVuaWQgcHJvZmlsZSBVc2VyLlJlYWQgZW1haWwiLCJzaWQiOiIwMDZlODEyOS02NmU5LTVhYmQtM2ZiNi1mNjk2NGI0NzBkMDUiLCJzaWduaW5fc3RhdGUiOlsia21zaSJdLCJzdWIiOiJodkZUb1R2blBzbXdGWEJ6Q3BjS2t3empSY1R5WDdjVmZ0VV9NOUZTYVpRIiwidGVuYW50X3JlZ2lvbl9zY29wZSI6IkVVIiwidGlkIjoiOGZkZDQ0NjAtNGQ1OC00NGVkLWFjMmItZTVjNDI5ZDhlODAwIiwidW5pcXVlX25hbWUiOiJkYW5ueUBwcm9jdXJlb24ubmwiLCJ1cG4iOiJkYW5ueUBwcm9jdXJlb24ubmwiLCJ1dGkiOiJGUDlEVGdWNlBVYXJ3S3BEcVVKT0FBIiwidmVyIjoiMS4wIiwid2lkcyI6WyI5ZjA2MjA0ZC03M2MxLTRkNGMtODgwYS02ZWRiOTA2MDZmZDgiLCJiNzlmYmY0ZC0zZWY5LTQ2ODktODE0My03NmIxOTRlODU1MDkiXSwieG1zX2NjIjpbIkNQMSJdLCJ4bXNfZnRkIjoiRWozRmJkUjJuRkNvOWpiX1d3NjJyamxtc2w3anRuMlAybDZnRXM4X2NfWUJjM2RsWkdWdVl5MWtjMjF6IiwieG1zX2lkcmVsIjoiMTAgMSIsInhtc19zc20iOiIxIiwieG1zX3N0Ijp7InN1YiI6IjJnMmNzMi1SaUZ3SXRUYjBPWTVBb0hkY2cxZzJFZnhpcjhYV21STGJpYTQifSwieG1zX3RjZHQiOjE0MjM2NjE3MzAsInhtc190ZGJyIjoiRVUifQ.Q7FhLJMYDXmYX3kVT6C3aQLAlF0_V_3AD4DH-HW1R4H1CsoZImHFALCzMYMRcr-cqDSW_ZNxgJQ9iwRoCmRzzYwUavnumu4MdtCARwWalQOu3xLQZoJo7mQjt4GTUsfwfOWvPSWW4L5ue0YDqvN2c5rCQOnj0mjXqHGWCr9DEdj53Vsv0KZZ3Uyfym_cbtMZWt5CQLiyFjNs8LerLWN0huhCLFJgVD2bcVQCFgsYLuMcJFlJDv8Ub72BiDRX5XZLot49s3sc6AJlwD0aGVnEv4PaKQt--mE-0iLQKCYNG2xv1UbkkQkQ5L5KiCc9UMhqoyAUY_TNkonKteZCYq-DUA"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        -2688,
+        -1632
+      ],
+      "id": "491c1807-4d02-4ce2-8b5d-82c4f9c9d990",
+      "name": "HTTP Request",
+      "credentials": {
+        "microsoftOAuth2Api": {
+          "id": "PSjhsKlS2W5YDESQ",
+          "name": "Microsoft account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "url": "=https://graph.microsoft.com/v1.0/me/mailFolders/{{ $json.value[1].id }}/\n",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "microsoftOAuth2Api",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        -2240,
+        -1632
+      ],
+      "id": "b40be94c-2041-4eea-92a9-8217590b4711",
+      "name": "HTTP Request2",
+      "credentials": {
+        "microsoftOAuth2Api": {
+          "id": "PSjhsKlS2W5YDESQ",
+          "name": "Microsoft account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "9d2b5d3a-2412-46f8-a933-ab44c706914c",
+              "name": "jobTitle",
+              "value": "={{ $json.subject }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        -960,
+        -1456
+      ],
+      "id": "a295d99b-c91c-423b-a421-779998833057",
+      "name": "Extract Job Title1"
+    },
+    {
+      "parameters": {
+        "modelId": {
+          "__rl": true,
+          "value": "chatgpt-4o-latest",
+          "mode": "list",
+          "cachedResultName": "CHATGPT-4O-LATEST"
+        },
+        "messages": {
+          "values": [
+            {
+              "content": "=You are an extremely critical Applicant Tracking System (ATS) that filters candidates for a job opening. Evaluate the candidate based on the provided job description and resume.\n\nUse a **100-point rubric** with strict penalties for missing or vague details. Do not be generous. The scoring rubric is:\n\n1. Education (20 pts)  \n2. Tools, Certifications, Technologies (20 pts)  \n3. Relevant Work Experience (20 pts)  \n4. Skills alignment with job duties (20 pts)  \n5. Overall alignment and resume quality (20 pts)\n\n---\n\n**Rules:**\n\n- Do NOT assign full points unless the evidence is explicitly strong.  \n- Penalize unclear, missing, or generic information.  \n- Do NOT give scores above 80 unless the candidate is exceptional.  \n- Use the provided `candidate_name` as-is. Do NOT extract from resume.  \n- Extract `job_title` from the job description directly.  \n- Extract the `email`, `phone_number`, and `country` from the resume text.  \n- Capitalize the `country` with the first letter uppercase and the rest lowercase (e.g., Pakistan, Netherlands).  \n- Return `null` for `email`, `phone_number`, or `country` if not found or not clear.\n\nThis is the resume text: {{ $json.text }}\nThis is the Job Description: {{ $json['Job Description'] }}\n\nReturn a **valid JSON** object with the following keys:\n\n```json\n{\n  \"score\": 76,\n  \"summary\": \"The candidate has solid experience and education but lacks familiarity with required technologies.\",\n  \"job_title\": \"Reverse Supply Chain Engineer\",\n  \"candidate_name\": \"Berna Ali\",\n  \"email\": \"berna.ali@email.com\",\n  \"phone_number\": \"+1-555-123-4567\",\n  \"country\": \"Netherlands\"\n}\n"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.openAi",
+      "typeVersion": 1.8,
+      "position": [
+        2032,
+        -1248
+      ],
+      "id": "acc6a6b5-7458-4fd1-9a17-6aeeaf6bb1e5",
+      "name": "Message a model1",
+      "retryOnFail": true,
+      "waitBetweenTries": 5000,
+      "credentials": {
+        "openAiApi": {
+          "id": "XvfBxaEG1fZScE1o",
+          "name": "OpenAi account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "mode": "combine",
+        "combineBy": "combineByPosition",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 3.2,
+      "position": [
+        1648,
+        -1248
+      ],
+      "id": "aa7f8bf4-2af4-495d-8f28-7fd3dcd75de4",
+      "name": "Merge"
+    },
+    {
+      "parameters": {
+        "method": "=GET",
+        "url": "=https://graph.microsoft.com/v1.0/me/mailFolders/{{ $('HTTP Request2').item.json.id }}/messages?$top=250&$filter=receivedDateTime ge {{ $json['Set 24h Timestamp'] }}",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "microsoftOAuth2Api",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        -1824,
+        -1632
+      ],
+      "id": "9e9531ce-50d6-4e06-8e07-2b6ccc8d89e8",
+      "name": "Fetch Emails from Solicitates",
+      "credentials": {
+        "microsoftOAuth2Api": {
+          "id": "PSjhsKlS2W5YDESQ",
+          "name": "Microsoft account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "fieldToSplitOut": "value",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.splitOut",
+      "typeVersion": 1,
+      "position": [
+        -1616,
+        -1632
+      ],
+      "id": "626541fc-d2c8-4d55-949c-64d8467cfe47",
+      "name": "Split Email Items"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "loose",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "bd333452-dc13-4c4d-9434-0647fd9f7d3f",
+              "leftValue": "={{ $json.hasAttachments }}",
+              "rightValue": "true",
+              "operator": {
+                "type": "string",
+                "operation": "equals",
+                "name": "filter.operator.equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "looseTypeValidation": true,
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        -1424,
+        -1632
+      ],
+      "id": "4996db60-9fcc-4c80-8110-201037768847",
+      "name": "hasAttachments"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 3,
+      "position": [
+        -1152,
+        -1648
+      ],
+      "id": "432e9979-85c5-489b-92f6-abb54adc7a77",
+      "name": "Loop Over Items"
+    },
+    {
+      "parameters": {
+        "url": "=https://graph.microsoft.com/v1.0/me/messages/{{ $json[\"id\"] }}/attachments",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "microsoftOAuth2Api",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        -736,
+        -1632
+      ],
+      "id": "aba69043-945d-4e60-9795-ef3c62d1d7ad",
+      "name": "Get Attachment from Email",
+      "retryOnFail": true,
+      "waitBetweenTries": 5000,
+      "credentials": {
+        "microsoftOAuth2Api": {
+          "id": "PSjhsKlS2W5YDESQ",
+          "name": "Microsoft account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "toBinary",
+        "sourceProperty": "value[0].contentBytes",
+        "options": {
+          "fileName": "={{ $json[\"value\"][0][\"name\"] }}"
+        }
+      },
+      "type": "n8n-nodes-base.convertToFile",
+      "typeVersion": 1.1,
+      "position": [
+        -320,
+        -1632
+      ],
+      "id": "d10305d0-9f93-48d5-950f-db17fe80e0b9",
+      "name": "Convert to File"
+    },
+    {
+      "parameters": {
+        "operation": "pdf",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.extractFromFile",
+      "typeVersion": 1,
+      "position": [
+        1520,
+        -1920
+      ],
+      "id": "ef4efe4a-fd0c-4606-aa9e-3b17cdf712a7",
+      "name": "Extract from File",
+      "alwaysOutputData": false
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "loose",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "b863c795-bbe9-4a23-b9da-b68f98043f9f",
+              "leftValue": "={{ $binary.data.mimeType }}",
+              "rightValue": "=application/pdf",
+              "operator": {
+                "type": "string",
+                "operation": "equals",
+                "name": "filter.operator.equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "looseTypeValidation": true,
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        -208,
+        -1904
+      ],
+      "id": "6a49a072-165a-4731-a3de-e85ab7b4d78c",
+      "name": "Is PDF?"
+    },
+    {
+      "parameters": {
+        "modelId": {
+          "__rl": true,
+          "value": "gpt-3.5-turbo",
+          "mode": "list",
+          "cachedResultName": "GPT-3.5-TURBO"
+        },
+        "messages": {
+          "values": [
+            {
+              "content": "=You are a strict job title classifier.\n\nYour task is to match the following input:\n\nEmail Subject: \"{{ $json.jobTitle }}\"\n\nReturn the **exact job title** from the list below that best matches the subject.  \nIf **none match clearly**, return the word: **notfound**\n\nList of valid job titles:\n{{ $json['Job Title'] }}\n\n⚠️ Output must be only:\n- One of the titles above  \n**OR**\n- The exact word: `notfound` (if no match)\n\nDo not explain or add anything else."
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.openAi",
+      "typeVersion": 1.8,
+      "position": [
+        288,
+        -1440
+      ],
+      "id": "7e8a9319-9338-412a-ba53-a04f8720763d",
+      "name": "Message a model",
+      "retryOnFail": true,
+      "waitBetweenTries": 5000,
+      "credentials": {
+        "openAiApi": {
+          "id": "XvfBxaEG1fZScE1o",
+          "name": "OpenAi account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "url": "={{ $json[\"Files\"][0][\"Url\"] }}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        768,
+        -1744
+      ],
+      "id": "48bd7dca-fb9c-4d13-82bc-55bf296b1603",
+      "name": "HTTP Request (Download PDF)",
+      "retryOnFail": true,
+      "waitBetweenTries": 5000
+    },
+    {
+      "parameters": {
+        "curlImport": "",
+        "httpVariantWarning": "",
+        "method": "POST",
+        "url": "https://v2.convertapi.com/convert/docx/to/pdf",
+        "": "",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "convertApi",
+        "provideSslCertificates": false,
+        "sendQuery": false,
+        "sendHeaders": true,
+        "specifyHeaders": "keypair",
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer e0btZs4Vh0ci2JS8Px9fQH5CVonawcPd"
+            },
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "contentType": "json",
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"Parameters\": [\n    {\n      \"Name\": \"File\",\n      \"FileValue\": {\n        \"Name\": \"{{ $binary.data.fileName }}\",\n        \"Data\": \"data\"\n      }\n    },\n    {\n      \"Name\": \"StoreFile\",\n      \"Value\": true\n    }\n  ]\n}\n",
+        "options": {},
+        "infoMessage": ""
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        592,
+        -1744
+      ],
+      "id": "ceaff4bd-b024-4d0a-9795-25f1bb65a33d",
+      "name": "Convert Docx to PDF",
+      "extendsCredential": "convertApi",
+      "retryOnFail": true,
+      "waitBetweenTries": 5000,
+      "credentials": {
+        "convertApi": {
+          "id": "PaDAjcZRUhx0Brvr",
+          "name": "ConvertAPI account 3"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "url": "={{ $json[\"@odata.nextLink\"] }}",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "microsoftOAuth2Api",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        -2480,
+        -1632
+      ],
+      "id": "136b1628-4e6a-4a2f-962a-9163895bea64",
+      "name": "HTTP Request1",
+      "credentials": {
+        "microsoftOAuth2Api": {
+          "id": "PSjhsKlS2W5YDESQ",
+          "name": "Microsoft account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "create",
+        "base": {
+          "__rl": true,
+          "value": "appJ71HsB43cgZWT7",
+          "mode": "list",
+          "cachedResultName": "resume storage base",
+          "cachedResultUrl": "https://airtable.com/appJ71HsB43cgZWT7"
+        },
+        "table": {
+          "__rl": true,
+          "value": "tblejbc1d2zjdMKoY",
+          "mode": "list",
+          "cachedResultName": "Resume info",
+          "cachedResultUrl": "https://airtable.com/appJ71HsB43cgZWT7/tblejbc1d2zjdMKoY"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "Name": "={{ $('If score > 50').item.json.candidate_name }}",
+            "Resume Link": "={{ $json.webViewLink }}",
+            "Email": "={{ $('If score > 50').item.json.email }}",
+            "Phone": "={{ $('If score > 50').item.json.phone_number }}",
+            "Job Title": "={{ $('If score > 50').item.json.job_title }}",
+            "Score": "={{ $('If score > 50').item.json.score }}",
+            "Summary": "={{ $('If score > 50').item.json.summary }}"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "Name",
+              "displayName": "Name",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "Email",
+              "displayName": "Email",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "Phone",
+              "displayName": "Phone",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "Job Title",
+              "displayName": "Job Title",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "Score",
+              "displayName": "Score",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "number",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "Summary",
+              "displayName": "Summary",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "Resume Link",
+              "displayName": "Resume Link",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.airtable",
+      "typeVersion": 2.1,
+      "position": [
+        4176,
+        -1712
+      ],
+      "id": "4d16754c-5e82-4581-a614-51bbc6154a4f",
+      "name": "Create a record",
+      "credentials": {
+        "airtableTokenApi": {
+          "id": "E3pHtSUXUXuXi3ti",
+          "name": "Airtable Personal Access Token account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "loose",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "c201eb81-eebf-42d5-95c0-82b52b40d825",
+              "leftValue": "={{ $json.score }}",
+              "rightValue": 50,
+              "operator": {
+                "type": "number",
+                "operation": "gte"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "looseTypeValidation": true,
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        3488,
+        -1472
+      ],
+      "id": "5619b1c6-de8d-4b2a-ae92-3d489d34cbda",
+      "name": "If score > 50",
+      "alwaysOutputData": true
+    },
+    {
+      "parameters": {
+        "operation": "search",
+        "base": {
+          "__rl": true,
+          "value": "appJ71HsB43cgZWT7",
+          "mode": "list",
+          "cachedResultName": "resume storage base",
+          "cachedResultUrl": "https://airtable.com/appJ71HsB43cgZWT7"
+        },
+        "table": {
+          "__rl": true,
+          "value": "tblt8fu5OLVe9CWS1",
+          "mode": "list",
+          "cachedResultName": "Job Description",
+          "cachedResultUrl": "https://airtable.com/appJ71HsB43cgZWT7/tblt8fu5OLVe9CWS1"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.airtable",
+      "typeVersion": 2.1,
+      "position": [
+        -784,
+        -1296
+      ],
+      "id": "e572ef9d-be88-4777-9a84-de253d6046a1",
+      "name": "Search records1",
+      "credentials": {
+        "airtableTokenApi": {
+          "id": "E3pHtSUXUXuXi3ti",
+          "name": "Airtable Personal Access Token account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "fieldsToAggregate": {
+          "fieldToAggregate": [
+            {
+              "fieldToAggregate": "Job Title"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.aggregate",
+      "typeVersion": 1,
+      "position": [
+        -496,
+        -1296
+      ],
+      "id": "7bc6f50e-e6b9-4697-88f0-bcb4c191689e",
+      "name": "Aggregate"
+    },
+    {
+      "parameters": {
+        "mode": "combine",
+        "combineBy": "combineByPosition",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 3.2,
+      "position": [
+        -64,
+        -1440
+      ],
+      "id": "f29f2b74-91f8-4097-8df0-7eb6b0f4a2af",
+      "name": "Merge1"
+    },
+    {
+      "parameters": {
+        "jsCode": "const raw = $json[\"message\"][\"content\"];\n\ntry {\n  // Remove triple backticks and \"json\" label\n  const cleaned = raw.replace(/```json|```/g, '').trim();\n\n  // Parse JSON\n  const parsed = JSON.parse(cleaned);\n\n  return [{\n    json: {\n      score: parsed.score,\n      summary: parsed.summary,\n      job_title: parsed.job_title,\n      candidate_name: parsed.candidate_name,\n      email: parsed.email,\n      phone_number: parsed.phone_number,\n      country: parsed.country\n    }\n  }];\n\n} catch (error) {\n  return [{\n    json: {\n      error: true,\n      message: \"JSON parse failed\",\n      raw_content: raw\n    }\n  }];\n}\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        2432,
+        -1248
+      ],
+      "id": "14654ad3-e90e-492f-9a7d-46f3d7e2a872",
+      "name": "Extract Features"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "loose",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "61b08f76-da22-4ffd-a343-ad824ccdb41e",
+              "leftValue": "={{ $json.country }}",
+              "rightValue": "Netherlands",
+              "operator": {
+                "type": "string",
+                "operation": "equals",
+                "name": "filter.operator.equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "looseTypeValidation": true,
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        3072,
+        -1456
+      ],
+      "id": "167d8fcf-7376-4f22-985c-1138e526bc1f",
+      "name": "If Country is Netherlands"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "loose",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "06275354-45a5-40cc-b9b4-9d8016daddab",
+              "leftValue": "={{ $json.message.content }}",
+              "rightValue": "notfound",
+              "operator": {
+                "type": "string",
+                "operation": "equals",
+                "name": "filter.operator.equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "looseTypeValidation": true,
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        576,
+        -1088
+      ],
+      "id": "020b54df-d9f2-4b5b-b24a-7870c859abdf",
+      "name": "If Job title not Matches"
+    },
+    {
+      "parameters": {
+        "operation": "search",
+        "base": {
+          "__rl": true,
+          "value": "appJ71HsB43cgZWT7",
+          "mode": "list",
+          "cachedResultName": "resume storage base",
+          "cachedResultUrl": "https://airtable.com/appJ71HsB43cgZWT7"
+        },
+        "table": {
+          "__rl": true,
+          "value": "tblt8fu5OLVe9CWS1",
+          "mode": "list",
+          "cachedResultName": "Job Description",
+          "cachedResultUrl": "https://airtable.com/appJ71HsB43cgZWT7/tblt8fu5OLVe9CWS1"
+        },
+        "filterByFormula": "=({Job Title} = \"{{ $json[\"message\"][\"content\"] }}\")\n",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.airtable",
+      "typeVersion": 2.1,
+      "position": [
+        1536,
+        -1072
+      ],
+      "id": "778e827d-cbf9-49a8-aacd-b73eebbe136a",
+      "name": "Get JD",
+      "credentials": {
+        "airtableTokenApi": {
+          "id": "E3pHtSUXUXuXi3ti",
+          "name": "Airtable Personal Access Token account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "0b6d8e83-48e8-49b7-a109-efcd99d90534",
+              "name": "Set 24h Timestamp",
+              "value": "={{ (() => {\n  const now = new Date();\n  now.setHours(now.getHours() - 24);\n  return now.toISOString();\n})() }}\n",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        -2016,
+        -1632
+      ],
+      "id": "a5a469b9-5928-4525-9e18-760d891107ec",
+      "name": "Edit Fields"
+    },
+    {
+      "parameters": {
+        "name": "={{ $binary.data.fileName }}",
+        "driveId": {
+          "__rl": true,
+          "value": "My Drive",
+          "mode": "list",
+          "cachedResultName": "My Drive",
+          "cachedResultUrl": "https://drive.google.com/drive/my-drive"
+        },
+        "folderId": {
+          "__rl": true,
+          "value": "1G6hLJO1sTHIoaXgd-NEV-D5AeeiD8qrk",
+          "mode": "list",
+          "cachedResultName": "Sollicitaties-all",
+          "cachedResultUrl": "https://drive.google.com/drive/folders/1G6hLJO1sTHIoaXgd-NEV-D5AeeiD8qrk"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleDrive",
+      "typeVersion": 3,
+      "position": [
+        3616,
+        -1712
+      ],
+      "id": "5f035ddf-a0c5-465f-807e-63d8361f59fb",
+      "name": "Upload file",
+      "credentials": {
+        "googleDriveOAuth2Api": {
+          "id": "cee149C1g71vUyRr",
+          "name": "Google Drive account 3"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "mode": "combine",
+        "combineBy": "combineByPosition",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 3.2,
+      "position": [
+        2544,
+        -1456
+      ],
+      "id": "e35857c1-16e8-4a1e-9c71-4fed0f7895f8",
+      "name": "Merge2"
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "triggerAtHour": 19,
+              "triggerAtMinute": 30
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        -2912,
+        -1632
+      ],
+      "id": "23088fdb-f6a2-4e76-94a6-960e29d3a2ca",
+      "name": "Schedule Trigger"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "HTTP Request": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request2": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Extract Job Title1": {
+      "main": [
+        [
+          {
+            "node": "Search records1",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Merge1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Message a model1": {
+      "main": [
+        [
+          {
+            "node": "Extract Features",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Merge": {
+      "main": [
+        [
+          {
+            "node": "Message a model1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Fetch Emails from Solicitates": {
+      "main": [
+        [
+          {
+            "node": "Split Email Items",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Split Email Items": {
+      "main": [
+        [
+          {
+            "node": "hasAttachments",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "hasAttachments": {
+      "main": [
+        [
+          {
+            "node": "Loop Over Items",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Loop Over Items": {
+      "main": [
+        [],
+        [
+          {
+            "node": "Extract Job Title1",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Get Attachment from Email",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get Attachment from Email": {
+      "main": [
+        [
+          {
+            "node": "Convert to File",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Convert to File": {
+      "main": [
+        [
+          {
+            "node": "Is PDF?",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Merge2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Extract from File": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Is PDF?": {
+      "main": [
+        [
+          {
+            "node": "Extract from File",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Convert Docx to PDF",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Message a model": {
+      "main": [
+        [
+          {
+            "node": "If Job title not Matches",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request (Download PDF)": {
+      "main": [
+        [
+          {
+            "node": "Extract from File",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Convert Docx to PDF": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request (Download PDF)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request1": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Create a record": {
+      "main": [
+        [
+          {
+            "node": "Loop Over Items",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If score > 50": {
+      "main": [
+        [
+          {
+            "node": "Upload file",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Loop Over Items",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Search records1": {
+      "main": [
+        [
+          {
+            "node": "Aggregate",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Aggregate": {
+      "main": [
+        [
+          {
+            "node": "Merge1",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "Merge1": {
+      "main": [
+        [
+          {
+            "node": "Message a model",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Extract Features": {
+      "main": [
+        [
+          {
+            "node": "Merge2",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "If Country is Netherlands": {
+      "main": [
+        [
+          {
+            "node": "If score > 50",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Loop Over Items",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If Job title not Matches": {
+      "main": [
+        [
+          {
+            "node": "Loop Over Items",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Get JD",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get JD": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "Edit Fields": {
+      "main": [
+        [
+          {
+            "node": "Fetch Emails from Solicitates",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Upload file": {
+      "main": [
+        [
+          {
+            "node": "Create a record",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Merge2": {
+      "main": [
+        [
+          {
+            "node": "If Country is Netherlands",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Schedule Trigger": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "dc2825e3-b37b-4b93-b768-58d59fac2549",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "f45e6f183c717d62b36a5a2b79d65806924f16bf22782edaca2b177cdfc08d21"
+  },
+  "id": "362F6j0ISELJxoVh",
+  "tags": []
+}
