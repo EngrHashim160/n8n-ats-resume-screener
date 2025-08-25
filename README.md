@@ -1,4 +1,5 @@
 # 📄 Resume ATS Workflow (Final Version)
+![ATS Resume Screening](ats_resume_screening.png)
 
 ## Overview
 This n8n workflow automates the process of **retrieving candidate resumes from Outlook**, **extracting data**, and **evaluating them** against stored job descriptions using an **AI-powered ATS scoring system**.  
